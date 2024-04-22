@@ -2,7 +2,7 @@
 #include <gtest/gtest.h>
 
 TEST(StringCalculatorTestSuite,GivenEmptyStringZeroIsExpected){
-    //Arrange
+    //Arrangee
     StringCalculator objUnderTest;
     string input="";
     int expectedValue=0;
