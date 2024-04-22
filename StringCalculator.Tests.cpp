@@ -11,3 +11,14 @@ TEST(StringCalculatorTestSuite,GivenEmptyStringZeroIsExpected){
     //Assert
     ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(StringCalculatorTestSuite,Given2numbers){
+    //Arrangee
+    StringCalculator objUnderTest;
+    string input="1,2";
+    int expectedValue=3;
+    //Act
+   int actualValue=  objUnderTest.Add(input);
+    //Assert
+    ASSERT_EQ(actualValue,expectedValue);
+}
