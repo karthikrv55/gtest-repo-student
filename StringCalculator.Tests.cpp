@@ -60,7 +60,7 @@ TEST(StringCalculatorTestSuite,when_passed_negative_numbers){
     //Act
    
     //Assert
-    ASSERT_THROW(objUnderTest.Add(input));
+    ASSERT_ANY_THROW(objUnderTest.Add(input));
 }
 TEST(StringCalculatorTestSuite,when_passed_negative_numbers1){
     //Arrangee
