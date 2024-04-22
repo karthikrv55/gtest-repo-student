@@ -58,9 +58,19 @@ TEST(StringCalculatorTestSuite,when_passed_negative_numbers){
     string input="1,-2,-4,5";
     int expectedValue=3;
     //Act
-   int actualValue=  objUnderTest.Add(input);
+   
     //Assert
-    ASSERT_EQ(actualValue,expectedValue);
+    ASSERT_THROW(objUnderTest.Add(input));
+}
+TEST(StringCalculatorTestSuite,when_passed_negative_numbers1){
+    //Arrangee
+    StringCalculator objUnderTest;
+    string input="1,-2,-4,5";
+    int expectedValue=3;
+    //Act
+  
+    //Assert
+    ASSERT_THROW(objUnderTest.Add(input),invalid_argument);
 }
 TEST(StringCalculatorTestSuite,when_passed_numbers_over_1000){
     //Arrangee
