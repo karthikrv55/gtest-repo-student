@@ -13,5 +13,5 @@ TEST(TeleColorSuite,GivenMajorandMinorColor){
     std::cout << minorColor;
     
   //ColorPair expectedValue=actualValue;
-    //ASSERT_EQ(actualValue,expectedValue);
+    ASSERT_EQ(minorColor,"BROWN");
 }
