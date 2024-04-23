@@ -24,7 +24,7 @@ class DataDriveTestFixtureWithParam:
 TEST_F(DataDrivenTestFixture,GivenEmptyStringZeroIsExpected){
    
     string input="";
-    int expectedValue=10;
+    int expectedValue=0;
     //Act
    int actualValue=  objUnderTest.Add(input);
     //Assert
