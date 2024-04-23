@@ -12,7 +12,14 @@ class DataDriveTestFixtureWithParam:
 
 INSTANTIATE_TEST_SUITE_P(ValidInputDataSource,DataDriveTestFixtureWithParam,
                             testing::Values(
-                            std::make_tuple(4,"White Brown")
+                            std::make_tuple(4,"White Brown"),
+                            std::make_tuple(2,"White Orange"),
+                            std::make_tuple(5,"White Slate"),
+                            std::make_tuple(9,"Red Brown"),
+                            std::make_tuple(12,"Black Orange"),
+                            std::make_tuple(15,"Black Slate"),
+                            std::make_tuple(16,"Yellow Blue"),
+                            std::make_tuple(24,"Violet Brown")
                                ));
 
 TEST_P(DataDriveTestFixtureWithParam,ParameterizedTestCase){
