@@ -18,8 +18,6 @@ enable_testing()
 add_compile_options("--coverage")
 add_executable(
   StringCalculatorTests
-  StringCalculator.cpp
-  StringCalculator.Tests.cpp
   TeleColor.Test.cpp
   )
 target_link_libraries(
