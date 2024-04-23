@@ -8,7 +8,10 @@ TEST(TeleColorSuite,GivenMajorandMinorColor){
     //Act
    ColorPair actualValue= GetColorFromPairNumber(input);
     //Assert
-
+    MajorColor majorColor = actualValue.getMajor();
+   MinorColor minorColor = actualValue.getMinor();
+    std::cout<<minorColor<<std::endl;
+    
   //ColorPair expectedValue=actualValue;
     //ASSERT_EQ(actualValue,expectedValue);
 }
