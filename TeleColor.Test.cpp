@@ -1,7 +1,7 @@
 #include "TeleCo.h"
 #include <gtest/gtest.h>
 
-class DataDrivenTestFixture1:public testing1::Test{
+class DataDrivenTestFixture1:public testing::Test{
    
 };
 class DataDriveTestFixtureWithParam1:
@@ -11,11 +11,11 @@ class DataDriveTestFixtureWithParam1:
 };
 
 INSTANTIATE_TEST_SUITE_P(ValidInputDataSource,DataDriveTestFixtureWithParam1,
-                            testing1::Values(
+                            testing::Values(
                             std::make_tuple(4,"White Brown"),
                                ));
 
-TEST_P(DataDriveTestFixtureWithParam,ParameterizedTestCase){
+TEST_P(DataDriveTestFixtureWithParam1,ParameterizedTestCase){
     int input=std::get<0>(GetParam());
     string expectedValue=std::get<1>(GetParam());
     //Act
