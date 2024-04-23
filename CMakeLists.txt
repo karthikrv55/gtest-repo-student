@@ -21,6 +21,7 @@ add_executable(
   StringCalculator.cpp
   StringCalculator.Tests.cpp
   TelCoColorCoder.cpp
+  TeleColor.Test.cpp
   )
 target_link_libraries(
   StringCalculatorTests
