@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class ColorPairIn extends ColorPair{
+Interface ColorPairin Implements ColorPair{
 public:
 	 ColorPair GetColorFromPairNumber(int pairNumber);
          int GetPairNumberFromColor(MajorColor major, MinorColor minor);
