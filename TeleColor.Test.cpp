@@ -1,12 +1,12 @@
 #include "TeleCo.h"
 #include <gtest/gtest.h>
 
-class DataDrivenTestFixture1:public testing::Test{
+class DataDrivenTestFixture:public testing::Test{
    
 };
 class DataDriveTestFixtureWithParam:
                  public DataDrivenTestFixture,
-                 public testing1::WithParamInterface<std::tuple<int,string>>{
+                 public testing::WithParamInterface<std::tuple<int,string>>{
  
 };
 
