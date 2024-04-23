@@ -1,6 +1,29 @@
 #include "TeleCo.h"
 #include <gtest/gtest.h>
 
+class DataDrivenTestFixture1:public testing1::Test{
+   
+};
+class DataDriveTestFixtureWithParam1:
+                 public DataDrivenTestFixture1,
+                 public testing1::WithParamInterface<std::tuple<int,string>>{
+ 
+};
+
+INSTANTIATE_TEST_SUITE_P(
+                            testing::Values(
+                            std::make_tuple(4,"White Brown"),
+                               ));
+
+TEST_P(DataDriveTestFixtureWithParam,ParameterizedTestCase){
+    string input=std::get<0>(GetParam());
+    int expectedValue=std::get<1>(GetParam());
+    //Act
+    int actualValue=  objUnderTest.Add(input);
+    //Assert
+    ASSERT_EQ(actualValue,expectedValue);
+}
+
 TEST(TeleColorSuite,GivenMajorandMinorColor){
     //Arrangee
      int input=4;
