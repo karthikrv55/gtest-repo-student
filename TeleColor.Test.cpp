@@ -22,7 +22,7 @@ TEST_P(DataDriveTestFixtureWithParam,ParameterizedTestCase){
     ColorPair actualValue= GetColorFromPairNumber(input);
    string value=actualValue.ToString();
     //Assert
-   // ASSERT_EQ(actualValue,expectedValue);
+   ASSERT_EQ(value,expectedValue);
 }
 
 TEST(TeleColorSuite,GivenMajorandMinorColor){
