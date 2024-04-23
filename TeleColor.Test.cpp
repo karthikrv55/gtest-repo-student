@@ -3,8 +3,7 @@
 
 TEST(TeleColorSuite,GivenMajorandMinorColor){
     //Arrangee
-    ColorPair objUnderTest;
-    int input=4;
+     int input=4;
     int expectedValue=0;
     //Act
    ColorPair actualValue= GetColorFromPairNumber(input);
