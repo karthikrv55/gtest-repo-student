@@ -8,7 +8,7 @@ There are 25 possible pairs of colors.
 - Each pair of colors maps to a corresponding number
 - Such numbers translate to a pair of colors - a major color and a minor color
 */
-#include <TeleCo.h>
+#include "TeleCo.h"
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
     enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
 
