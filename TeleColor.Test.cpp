@@ -10,7 +10,7 @@ TEST(TeleColorSuite,GivenMajorandMinorColor){
     //Assert
     MajorColor majorColor = actualValue.getMajor();
    MinorColor minorColor = actualValue.getMinor();
-    String value=actualValue.ToString();
+    string value=actualValue.ToString();
     std::cout << value;
     
   //ColorPair expectedValue=actualValue;
