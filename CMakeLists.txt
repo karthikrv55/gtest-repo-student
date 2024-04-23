@@ -20,8 +20,7 @@ add_executable(
   StringCalculatorTests
   StringCalculator.cpp
   StringCalculator.Tests.cpp
-  StingCalculator.Test1.cpp
-)
+  )
 target_link_libraries(
   StringCalculatorTests
   GTest::gmock_main
