@@ -4,10 +4,10 @@
 TEST(TeleColorSuite,GivenMajorandMinorColor){
     //Arrangee
     ColorPair objUnderTest;
-    string input="";
+    int input=4;
     int expectedValue=0;
     //Act
-   ColorPair actualValue= objUnderTest.GetColorFromPairNumber(input);
+   ColorPair actualValue= GetColorFromPairNumber(input);
     //Assert
 
   //ColorPair expectedValue=actualValue;
