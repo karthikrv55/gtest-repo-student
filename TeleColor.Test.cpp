@@ -10,16 +10,16 @@ class DataDriveTestFixtureWithParam1:
  
 };
 
-INSTANTIATE_TEST_SUITE_P(
-                            testing::Values(
+INSTANTIATE_TEST_SUITE_P(ValidInputDataSource,DataDriveTestFixtureWithParam1,
+                            testing1::Values(
                             std::make_tuple(4,"White Brown"),
                                ));
 
 TEST_P(DataDriveTestFixtureWithParam,ParameterizedTestCase){
-    string input=std::get<0>(GetParam());
-    int expectedValue=std::get<1>(GetParam());
+    int input=std::get<0>(GetParam());
+    string expectedValue=std::get<1>(GetParam());
     //Act
-    int actualValue=  objUnderTest.Add(input);
+    string actualValue=  GetColorFromPairNumber(input);
     //Assert
     ASSERT_EQ(actualValue,expectedValue);
 }
