@@ -4,18 +4,18 @@
 class DataDrivenTestFixture1:public testing::Test{
    
 };
-class DataDriveTestFixtureWithParam1:
-                 public DataDrivenTestFixture1,
+class DataDriveTestFixtureWithParam:
+                 public DataDrivenTestFixture,
                  public testing1::WithParamInterface<std::tuple<int,string>>{
  
 };
 
-INSTANTIATE_TEST_SUITE_P(ValidInputDataSource,DataDriveTestFixtureWithParam1,
+INSTANTIATE_TEST_SUITE_P(ValidInputDataSource,DataDriveTestFixtureWithParam,
                             testing::Values(
                             std::make_tuple(4,"White Brown"),
                                ));
 
-TEST_P(DataDriveTestFixtureWithParam1,ParameterizedTestCase){
+TEST_P(DataDriveTestFixtureWithParam,ParameterizedTestCase){
     int input=std::get<0>(GetParam());
     string expectedValue=std::get<1>(GetParam());
     //Act
